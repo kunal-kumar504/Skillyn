@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post page</title>
+    <link rel="stylesheet" href="post.css">
+</head>
+<body>
+<h1 id="head">Create a post</h1>
+
+<div class="container">
+
+    <!-- TOGGLE BUTTONS -->
+    <div class="tbtns">
+        <button id="offerBtn">Offer</button>
+        <button id="askBtn">Ask</button>
+    </div>
+
+    <!-- OFFER FORM -->
+    <form id="offerForm" class="form">
+        <h2>Offer Your Help</h2>
+
+        <label>Name</label>
+        <input type="text" id="offerName">
+
+        <label>What can you offer</label>
+        <input type="text" id="offerSkill">
+
+        <label>Description of your skill</label>
+        <textarea id="offerDesc"></textarea>
+
+        <label>Contact</label>
+        <input type="text" id="offerContact">
+
+        <button type="button" class="post-btn" id="skillBtn">
+            Post Offer
+        </button>
+    </form>
+
+    <!-- ASK FORM -->
+    <form id="askForm" class="form hidden">
+        <h2>Ask for Help</h2>
+
+        <label>Name</label>
+        <input type="text" id="askName">
+
+        <label>What do you want</label>
+        <input type="text" id="askSkill">
+
+        <label>Description of your demand</label>
+        <textarea id="askDesc"></textarea>
+
+        <label>Contact</label>
+        <input type="text" id="askContact">
+
+        <button type="button" class="post-btn" id="demandBtn">
+            Post Demand
+        </button>
+    </form>
+
+</div>
+
+<script type="module" src="post.js"></script>
+
+</body>
+</html>

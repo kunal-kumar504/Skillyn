@@ -1,0 +1,593 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.brand img {
+  width: 40px;
+  height: auto;
+}
+
+#logo {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #e5e7eba5;
+  padding: 10px 15px;
+  border-radius: 25px;
+  width: 400px;
+}
+
+.search-bar:hover {
+ background: #e5e7eb;
+}
+
+.search-bar i {
+  color: #6b7280;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 14px;
+}
+
+/* =========================
+   POST BUTTON
+========================= */
+.post {
+  width: 90px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.post:hover{
+  background-color: #0901aa;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.container {
+  display: flex;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  width: 220px;
+  height: calc(100vh - 60px);
+  position: fixed;
+  top: 60px;
+  left: 0;
+
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+/* Menu items */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #374151;
+  transition: 0.2s;
+}
+
+.menu-item i {
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.menu-item:hover {
+  background-color: #f3f4f6;
+}
+
+.menu-item.active {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+.menu-item.active i {
+  color: #4f46e5;
+}
+
+/* Sidebar image */
+.sideimage {
+  margin-top: auto;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.sideimage img {
+  width: 180px;
+  border-radius: 10px;
+}
+
+.mobile-filters{
+  display:none;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.maincontent {
+  margin-left: 220px;
+  margin-top: 60px;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.hero img {
+  height: 100px;
+}
+
+.htext {
+  flex: 1;
+}
+
+.htext h2 {
+  color: #333;
+  margin-bottom: 7px;
+}
+
+.htext p {
+  color: #6b7280;
+}
+
+.dost {
+  width: 150px;
+  height: 55px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dost:hover{
+  background-color: #0901aa;
+}
+
+/* =========================
+   CARDS CONTAINER (JS OUTPUT)
+========================= */
+#output {
+  display: grid;
+  gap: 15px;
+}
+
+/* =========================
+   CARD
+========================= */
+/* =========================
+   CARD CONTAINER
+========================= */
+#cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* =========================
+   EACH CARD
+========================= */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.299);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative; /* 🔥 IMPORTANT */
+    z-index: 1;
+}
+
+/* BADGE */
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* SKILL */
+.badge.offer {
+    background: #d1fae5;
+    color: #059669;
+}
+
+/* NEED */
+.badge.ask {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* dots */
+.dots {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* =========================
+   TITLE
+========================= */
+.card-title {
+    margin: 12px 0 6px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+.card-desc {
+    font-size: 14px;
+    color: #555;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* time */
+.time {
+    font-size: 12px;
+    color: #777;
+}
+
+/* contact button */
+.contact-btn {
+    padding: 6px 14px;
+    border-radius: 10px;
+    border: 1px solid #6366f1;
+    background: transparent;
+    color: #6366f1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #6366f1;
+    color: white;
+}
+
+.delete-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    background: #fee2e2;
+    color: red;
+    cursor: pointer;
+}
+
+/* =========================
+   MOBILE FIX (IMPORTANT DEBUG + RESPONSIVE)
+========================= */
+@media (max-width: 768px) {
+
+  /* ensure media query is actually overriding */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+  
+  /* ================= NAVBAR ================= */
+  .navbar {
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .brand img {
+    width: 40px;
+  }
+
+  #logo {
+    font-size: 16px;
+  }
+.search-bar {
+  width: 60%;
+}
+
+.search-bar input {
+  width: 80%
+}
+  .mobile-filters {
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+    height: 60px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .mobile-filters button {
+    flex: 1;
+    padding: 10px 5px;
+
+    border: none;
+    border-radius: 8px;
+    background: #f2f2f2;
+    font-size: 13px;
+  }
+
+  .mobile-filters button:active {
+    background: #ddd;
+  }
+  .mobile-filters button:hover {
+    background: #ddd;
+  }
+
+  .post {
+    width: 70px;
+    height: 34px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+
+  /* ================= SIDEBAR ================= */
+  .sidebar {
+    width: 70px;
+    padding: 10px 5px;
+  }
+
+  .menu-item {
+    justify-content: center;
+    gap: 0;
+    font-size: 0; /* hides text */
+  }
+
+  .menu-item i {
+    font-size: 20px;
+  }
+
+ .sidebar {
+  display: none;
+}
+
+  /* ================= MAIN CONTENT ================= */
+.maincontent {
+  position: fixed;
+  top: 110px; /* navbar (60) + filters (~50) */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 110px);
+  background-color: white;
+
+  overflow-y: auto;
+
+  margin: 0; /* remove old margins */
+  padding: 20px;
+}
+
+  /* ================= HERO ================= */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .hero img {
+    height: 50px;
+  }
+
+  .htext h2 {
+    font-size: 15px;
+  }
+
+  .htext p {
+    font-size: 13px;
+  }
+
+.dost {
+  text-shadow: none;
+  box-shadow: none;
+  width: 100px;
+}
+
+  /* ================= CARDS ================= */
+  #cardContainer {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  /* fix spacing issues */
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+  }
+
+   .mobile-filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    position: fixed;
+    top: 60px;        /* sits below navbar */
+    left: 0;
+    width: 100%;
+
+    background: #fff;
+    padding: 10px;
+    z-index: 999;
+  }
+
+  .mobile-filters button {
+    display: block;          /* important */
+    flex: 1;
+    border: 1px solid #ccc;  /* makes them visible */
+    background: #f2f2f2;
+    color: black;            /* important */
+    border-radius: 8px;
+  }
+
+  .mobile-filters button:hover{
+    background: #bfbdbd;
+  }
+
+  .mobile-filters button:active {
+    background: #bfbdbd;
+  }
+}
+
+
+
+@media (max-width: 500px) {
+  html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+#searchBar{
+  display:block;
+  width: 40%;
+}
+
+  .hero{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dost{
+    width: 100px;
+  }
+
+   .mobile-filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    position: fixed;
+    top: 60px;        /* sits below navbar */
+    left: 0;
+    width: 100%;
+
+    background: #fff;
+    padding: 10px;
+    z-index: 999;
+  }
+
+  .mobile-filters button {
+    display: block;          /* important */
+    flex: 1;
+    border: 1px solid #ccc;  /* makes them visible */
+    background: #f2f2f2;
+    color: black;            /* important */
+    border-radius: 8px;
+  }
+
+  .mobile-filters button:hover{
+    background: #bfbdbd;
+  }
+
+  .mobile-filters button:active {
+    background: #bfbdbd;
+  }
+}

@@ -1,0 +1,159 @@
+/* =========================
+RESET + BODY
+========================= */
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg, #eef2f7, #e3e8f0);
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* =========================
+HEADING
+========================= */
+#head {
+margin-top: 40px;
+font-size: 34px;
+font-weight: bold;
+}
+
+/* =========================
+MAIN CONTAINER
+========================= */
+.container {
+width: 420px;
+margin-top: 25px;
+}
+
+/* =========================
+TOGGLE BUTTONS
+========================= */
+.tbtns {
+display: flex;
+justify-content: center;
+background: #dfe3eb;
+padding: 5px;
+border-radius: 30px;
+margin-bottom: 20px;
+}
+
+.tbtns button {
+border: none;
+padding: 10px 25px;
+border-radius: 20px;
+background: transparent;
+cursor: pointer;
+font-weight: 500;
+transition: 0.3s;
+}
+
+.tbtns button:hover {
+background: #cfd5df;
+}
+
+/* active state (optional but recommended) */
+.tbtns button.active {
+background: #4f46e5;
+color: white;
+}
+
+/* =========================
+FORM CARD
+========================= */
+.form {
+background: white;
+padding: 25px;
+border-radius: 15px;
+box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.form h2 {
+margin-bottom: 15px;
+}
+
+/* =========================
+INPUTS
+========================= */
+.form input,
+.form textarea {
+width: 90%;
+padding: 12px;
+margin: 8px 0 15px;
+border-radius: 10px;
+border: 1px solid #ccc;
+outline: none;
+font-size: 14px;
+transition: 0.2s;
+}
+
+.form input:focus,
+.form textarea:focus {
+border-color: #4f46e5;
+}
+
+/* textarea size */
+.form textarea {
+resize: none;
+height: 90px;
+}
+
+/* =========================
+SUBMIT BUTTON
+========================= */
+.post-btn {
+width: 100%;
+padding: 14px;
+border: none;
+border-radius: 25px;
+background: blue;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.post-btn:hover {
+background-color: #0901aa;
+box-shadow: 0 6px 15px rgba(79,70,229,0.3);
+}
+
+/* =========================
+HIDDEN CLASS
+========================= */
+.hidden {
+display: none;
+}
+
+.cancel-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #e5e7eb;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cancel-btn:hover {
+    background: #d1d5db;
+}
+
+@media(max-width: 450px) {
+    
+    .form {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .tbtns{
+        width:70%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillyn Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.png?v=2">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+  </head>
+<body>
+<nav class="navbar">
+<div class="brand">
+    <img src="images/favicon.png">
+    <h2 id="logo">Skillyn</h2>
+</div>
+   <div class="search-bar">
+  <i class="fa fa-search"></i>
+  <input type="text" id="searchBar" placeholder="Search skills, help or anything...">
+</div>
+<a href="post.html">
+    <button class="post">+ Post</button>
+</a>
+</nav>
+
+<div class="mobile-filters">
+  <button onclick="filterCards('all')">All</button>
+  <button onclick="filterCards('offer')">Skills Offered</button>
+  <button onclick="filterCards('ask')">Help Needed</button>
+</div>
+
+<div class="container">
+    <aside class="sidebar"> 
+           <div class="menu-item" onclick="filterCards('all')">
+             <i class="fa fa-home"></i>
+             <span>All Posts</span>
+           </div>
+          
+           <div class="menu-item" onclick="filterCards('offer')">
+             <i class="fa fa-graduation-cap"></i>
+             <span>Skills Offered</span>
+           </div>
+
+           <div class="menu-item" onclick="filterCards('ask')">
+             <i class="fa fa-question"></i>
+             <span>Help Needed</span>
+           </div>
+
+           <div class="sideimage">
+            <img src="images/siimage.png" alt="">
+           </div>
+    </aside>
+    <div class="maincontent">
+        <section class="hero">
+            <img src="images/smile.PNG">
+            <div class="htext">
+               <h2 id="herotext">What can you offer or need?</h2>
+               <p id="heropara">Share your skills or ask for help with the community.</p>
+            </div>
+            <a href="post.html">
+              <button class="dost">Create Post</button>
+            </a>
+        </section>
+        <h3>Recent Posts</h3>
+        <div id="cardContainer">
+         </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
